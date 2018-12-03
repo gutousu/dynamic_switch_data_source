@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        session_factory:
+          statement_inspector: com.gutousu.dynamic_switch_data_source.config.StatementInspectorImpl
+  datasource:
+    primary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://0.0.0.0:1/gutousu_dynamic_switch_data_source_test_1?useSSL=true&verifyServerCertificate=false&useUnicode=true&characterEncoding=UTF8
+      username:
+      password:
+
+    secondary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://0.0.0.0:2/gutousu_dynamic_switch_data_source_test_2?useSSL=true&verifyServerCertificate=false&useUnicode=true&characterEncoding=UTF8
+      username:
+      password:
